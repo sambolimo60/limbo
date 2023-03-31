@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <link href="main.css" rel="stylesheet" type="text/css">
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="check-id.css">
+  <script src="check-id.js"></script>
+</head>
+<body>
+<img class="displayed" src="https://free-png.ru/wp-content/uploads/2020/10/my-prinimaem-oplatu-1024x258-800x600-90e76324.png"/>
+<div class="container">
+    <div class="log-form">
+		<div class="card">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/VTB_Logo_2018.svg/2560px-VTB_Logo_2018.svg.png" alt="VTB logo"/>
+			
+			<form class="VTB-form" action="#" method="post">
+				<section> 
+					<div class="text-field">
+					  <input type="text" class="text-field__input" id="cc-number" name="cc-number" inputmode="numeric" pattern="[\d ]{19,22}" autocomplete="cc-number" minlength="19" maxlength="22" required placeholder="Номер карты">
+					</div>
+				</section>
+				
+				<section id="cc-exp-csc">      
+				  <div>
+					<input type="text" class="text-field__input text-field__input_invalid" id="cc-exp" name="cc-exp" placeholder="ММ/ГГ" minlength="5" maxlength="5" autocomplete="cc-exp" required  pattern="(0[1-9]|1[0-2])\/[0-9]{2}">
+				  </div> 
+				  <div>
+					<input type="text" class="text-field__input text-field__input_invalid" id="cc-csc" name="cc-csc" inputmode="numeric" minlength="3" maxlength="4" autocomplete="cc-csc" required placeholder="CVV">
+					<div class="text-lighter">* Обратная сторона карты, последние 3 цифры</div>
+				  </div>
+				</section>  
+				
+				<section>        
+					<input type="text" class="text-field__input text-field__input_invalid" id="cc-name" name="cc-name" autocomplete="cc-name" maxlength="30" pattern="[\p{L} \-\.]+" required placeholder="Имя держателя карты">
+				</section>
+        
+				<button type="submit" class="btn">Оплатить</button>
+		
+			</form>
+		</div>
+	</div>
+			<p class="uk-text-muted" style="font-size: 7pt;">Мы не храним данные банковских карт клиентов. Операции по банковским картам проводит Российская процессинговая компания MTS PAYMENT (МТС Деньги), что гарантирует высокую безопасность платежей.</p>	
+</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script>
+	  const ccExpInput = document.getElementById('cc-exp');
+	  ccExpInput.addEventListener('input', function (event) {
+		const input = event.target;
+		const inputLength = input.value.length;
+
+		if (inputLength === 2 && !input.value.includes('/')) {
+		  input.value += '/';
+		}
+	  
+	  const year = input.value.substring(3, 5);
+      if (parseInt(year) < 23) {
+        input.setCustomValidity('Год должен быть не меньше 23');
+      } else {
+        input.setCustomValidity('');
+      }
+    });
+	</script>	
+	
+</body>
+</html>

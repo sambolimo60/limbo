@@ -1,0 +1,139 @@
+* {
+		box-sizing: border-box;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 0px;
+		}
+		.card {
+			background-color: #fff;
+			padding: 80px;
+			box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+		}
+		img.displayed {
+			display: flex;
+			margin: auto;
+			margin-top: 20px;
+			height: 100px;
+				
+			
+		}
+		.card img {
+			height: 60px;
+			margin-bottom: 70px;
+			margin-top: -55px;
+		}
+		.card input[name="cc-number"], .card input[name="cc-number"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			font-size: 20px;
+			outline: none;
+			background-color: #f8f8f8;
+			
+		}
+		.card input[name="cc-number"]:focus, .card input[name="cc-number"]:focus {
+			border-bottom: 1px solid #666;
+		}
+		.card input[name="cc-exp"], .card input[name="cc-exp"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			font-size: 20px;
+			outline: none;
+			background-color: #f8f8f8;
+			
+		}
+		.card input[name="cc-exp"]:focus, .card input[name="cc-exp"]:focus {
+			border-bottom: 1px solid #666;
+		}
+		.card input[name="cc-csc"], .card input[name="cc-csc"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 5px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			font-size: 20px;
+			outline: none;
+			background-color: #f8f8f8;
+			
+		}
+		.card input[name="cc-csc"]:focus, .card input[name="cc-csc"]:focus {
+			border-bottom: 1px solid #666;
+		}
+		.card input[name="cc-name"], .card input[name="cc-name"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 50px;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			font-size: 20px;
+			outline: none;
+			background-color: #f8f8f8;
+		}
+		.card input[name="cc-name"]:focus, .card input[name="cc-name"]:focus {
+			border-bottom: 1px solid #666;
+		}
+		.btn {
+			background-color:#007bff;
+			border-radius:5px;
+			border:1px solid #007bff;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:17px;
+			padding:16px 27px;
+			text-decoration:none;
+			
+		}
+		.text-lighter {
+		font-style: oblique;
+		font-size: 12px;
+		margin-bottom: 20px;
+		color: #9D9D9D
+		}
+		p.uk-text-muted {
+			text-align: center;
+		}
+		
+		
+		.text-field__input:invalid,
+		.text-field__input:valid {
+		  border-color: #dc3545;
+		  padding-right: 2.25rem;
+		  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+		  background-repeat: no-repeat;
+		  background-position: right 0.5625rem center;
+		  background-size: 1.125rem 1.125rem;
+		}
+		.text-field__input:valid {
+		  border-color: #198754;
+		  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+		}
+		.text-field__input:invalid:focus {
+		  border-color: #dc3545;
+		  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+		}
+		.text-field__input:valid:focus {
+		  border-color: #198754;
+		  box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
+		}
+		
